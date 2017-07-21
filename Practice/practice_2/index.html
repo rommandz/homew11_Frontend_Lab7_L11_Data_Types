@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice2</title>
+</head>
+<body>
+    <textarea name="" id="myTextAres" cols="30" rows="10"></textarea>
+    <button onclick="getDataFromTextArea()">Submit</button>
+    <script type="text/javascript" src="js/practice2.js"></script>
+    <script>
+        var users;
+        function getDataFromTextArea() {
+            users = JSON.parse(document.getElementById('myTextAres').value);
+            console.log(getGender(users)) ;
+            // colors
+            var objOfAllColors = getAllColors(users) ;
+            console.log(objOfAllColors) ;
+            console.log(favoriteColor(objOfAllColors));
+            console.log(uniqueColor(objOfAllColors));
+            // names
+            var allFirstNames = getAllFirstNames(users) ;
+            console.log(allFirstNames);
+            nonUniqueNames(allFirstNames);
+        }
+    </script>
+</body>
+</html>
